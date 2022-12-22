@@ -1,0 +1,107 @@
+Was versteht man unter Software Deployment?
+
+Ein Software-Deployment bezieht sich auf den Prozess, bei dem eine neue Software oder Anwendung auf einem Computer oder Server installiert und bereitgestellt wird, 
+sodass sie von den Benutzern genutzt werden kann. Dieser Prozess umfasst normalerweise die Übertragung der Software von einem Entwicklungs- oder Testserver auf
+einen produktionsbereiten Server, die Installation und Konfiguration der Software auf dem Server und die Verteilung der Software an die Benutzer.
+Im Allgemeinen ist ein Software-Deployment ein wichtiger Schritt im Software-Entwicklungszyklus, da es dafür sorgt, dass die neue Software den Benutzern zur 
+Verfügung steht und von ihnen genutzt werden kann.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Machen Sie ein Software-Deployment mit Intellij. :Haken_Emoji:
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was ist ein In-Place Deployment?
+
+Ein In-Place Deployment bezieht sich auf eine Art der Bereitstellung von Software, bei der die neue Version der Anwendung direkt auf dem existierenden Server 
+installiert wird. Dabei wird die alte Version der Anwendung überschrieben und durch die neue Version ersetzt. - Der Server greift direkt auf die war-Datei zu.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Welche Probleme können beim In-Place Deployment auftreten in IntelliJ?
+
+• Das Deployment ist langsam oder schlägt fehl.
+• Die Dateiübertragung reagiert nicht mehr.
+• Download/Upload-Aktionen sind nicht verfügbar.
+• Einige Ordner werden nicht deployed.
+...
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was ist eine Serverdomäne?
+
+Eine Domäne ist eine administrative Grenze, die eine Gruppe von GlassFish Server-Instanzen enthält, die gemeinsam verwaltet werden.
+Jede Instanz kann nur zu einer Domäne gehören. Eine Domäne bietet eine vorkonfigurierte Laufzeit für Benutzeranwendungen. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was ist der Domänenverwaltungsserver?
+
+Der Domain-Administrationsserver (DAS) ist eine speziell bezeichnete GlassFish Server-Instanz, die administrative Anwendungen hostet. 
+Der DAS ist ähnlich wie jede andere GlassFish Server-Instanz, außer dass der DAS über zusätzliche Verwaltungsfunktionen verfügt. 
+Die DAS authentifiziert den Administrator, nimmt Anfragen von Verwaltungstools entgegen und kommuniziert mit anderen Instanzen in der Domäne, 
+um die Anfragen von Verwaltungstools auszuführen.
+
+Jede Domäne hat ihre eigene DAS mit einer eindeutigen Verwaltungsportnummer. 
+Der Standard-Administrationsport ist 4848, aber ein anderer Port kann bei der Erstellung einer Domäne angegeben werden.
+
+Die DAS enthält die Master-Kopie der Konfigurationsdaten für alle Instanzen in einer Domäne. 
+Wenn eine Instanz zerstört wird, z. B. weil ein Host ausgefallen ist, kann die Instanz anhand der Daten im DAS neu erstellt werden.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was sind die Vorteile von Domänen?
+
+Wenn die Konfiguration einer Domäne geändert wird, sind die Konfigurationen der anderen Domänen davon nicht betroffen.
+Jede Domäne hat ihre eigenen Konfigurationsdaten, Protokolldateien und Anwendungsbereitstellungsbereiche, die von anderen Domänen unabhängig sind. 
+Domänen ermöglichen verschiedenen Organisationen und Administratoren die sichere gemeinsame Nutzung einer einzigen GlassFish Server-Installation. 
+Jede Organisation oder jeder Administrator kann die Instanzen in einer einzelnen Domäne verwalten, ohne die Instanzen in anderen Domänen zu beeinträchtigen.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was sind Serverinstanzen?
+
+Eine Serverinstanz ist eine bestimmte Konfiguration eines Servers. Ein Server kann mehrere Instanzen haben, die für unterschiedliche Zwecke verwendet werden können. 
+Zum Beispiel könnte eine Serverinstanz für die Verwaltung von E-Mails verwendet werden, während eine andere Instanz für die Ausführung von Datenbankanfragen genutzt wird. 
+In der Regel werden Serverinstanzen von Administratoren eingerichtet und verwaltet, um die Ressourcen eines Servers optimal zu nutzen.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was ist ein Cluster? Welche Rolle spielt ein Cluster?
+
+Ein Cluster ist eine Sammlung von GlassFish Server-Instanzen, die zusammen als eine logische Einheit arbeiten. 
+Ein Cluster bietet eine Laufzeitumgebung für eine oder mehrere Java Platform, Enterprise Edition (Java EE) Anwendungen. 
+Ein Cluster bietet hohe Verfügbarkeit durch Ausfallschutz, Skalierbarkeit und Load Balancing.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was versteht man unter vertikaler Skalierung bei einer Software?
+
+Unter vertikaler Skalierung versteht man in der Regel die Möglichkeit, die Leistung einer Software durch den Einsatz von mehr Ressourcen, wie zum Beispiel Arbeitsspeicher 
+oder CPU-Kernen, zu steigern. Dies kann beispielsweise erreicht werden, indem man einen leistungsstärkeren Computer verwendet oder mehrere Computer miteinander verbindet, 
+um die Gesamtleistung zu erhöhen. Vertikale Skalierung kann bei Bedarf schnell durchgeführt werden, ist aber in der Regel teurer als die horizontale Skalierung, bei der 
+die Leistung durch den Einsatz zusätzlicher Server erhöht wird.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was versteht man unter horizontaler Skalierung bei einer Software?
+
+Unter horizontaler Skalierung versteht man in der Regel die Möglichkeit, die Leistung einer Software durch den Einsatz von mehr Servern zu erhöhen. 
+Im Gegensatz zur vertikalen Skalierung, bei der die Leistung eines einzelnen Servers erhöht wird, kann bei der horizontalen Skalierung die Last auf mehrere Server verteilt werden. 
+Dadurch kann die Gesamtleistung erhöht werden, ohne dass einzelne Server überlastet werden. Horizontale Skalierung ist in der Regel kostengünstiger als die vertikale Skalierung, 
+kann aber aufwändiger sein, da mehrere Server eingerichtet und verwaltet werden müssen.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Was ist ein Node Agent? Welche Rolle spielt ein Node Agent?
+
+Der Node Agent ist ein Prozess, der für den Lebenszyklus der Instanzen (Erstellen, Stoppen, Starten, Löschen, Watchdog) verantwortlich ist, die auf diesem Rechner laufen.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Zusammenfassung
+
+Eine Serverdomäne ist eine Zusammenfassung einer oder mehr Serverinstanzen. Eine Serverinstanz ist eine bestimmte Konfiguration eines Servers (eine einzelne VM). Diese Instanzen 
+können zu Clustern zusammengefasst werden. Ein Cluster ist eine Sammlung von Server-Instanzen und diese arbeiten als eine logische Einheit zusammen. Auf jedem Server befindet sich der Node Agent
+Prozess. Dieser ist für den Lebenszyklus der Instanzen verantwortlich. Der DAS verfügt über zusätzliche Verwaltungsfunktionen bzw. verwaltet die Domäne. 
